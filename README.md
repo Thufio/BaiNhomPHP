@@ -7,7 +7,8 @@ Thành viên:
 + Lưu Vĩnh Phúc	- 60136556
 + Trần Đinh Trí - 60131750
 + Bùi Thành Tâm
+<br>
 Chủ đề nhóm: Website bán sách trực tuyến (nhà sách Hải Quân)
-Điểm danh thường xuyên:
+<br>
+Điểm danh thường xuyên và phân công công việc nhóm:
 https://docs.google.com/spreadsheets/d/1uRIIASmbR_XM0Kee_KilYnLkFXwhyWPBm1iTjDA9Boo/edit#gid=0
-Nhiệm vụ từng thành viên:
