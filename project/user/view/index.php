@@ -2,58 +2,7 @@
     include 'inc/header.php';
 
   ?>
-     <div class="mainmenu-area">
-        <div class="container">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-						<li class="active"><a href="?controller=index">Trang chủ</a></li>
-                        <li><a href="?controller=shop">Cửa hàng</a></li>
-                        <li ><a href="?controller=cart">Giỏ hàng</a></li>
-                        <li><a href="?controller=checkout">Thanh toán</a></li>
-                        <li><a href="?controller=contact">Liên hệ</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><?php
-
-                                $login_check = session::get("user_login");
-                                if ($login_check == false) { } else {
-                                    echo ' <a href="?controller=account"><span class="glyphicon glyphicon-user"></span> <b>Xin chào, ' . session::get("user_name") . '</b></a>';
-                                }
-                                ?>
-						</li>
-							<?php
-                            if (isset($_GET["user_id"])) {
-                                echo '<script language="javascript">';
-                                echo 'confirm("Bạn muốn đăng xuất?",function(e){';
-                                echo       'if(e==true){' . session::destroy() . ';}';
-                                echo '});';
-                                echo '</script>';
-                            }
-                            ?>
-						<li>
-							<?php
-                                $login_check = session::get("user_login");
-                                if ($login_check == false) {
-                                    echo '<a href="?controller=login"><i class="fa fa-user"></i> Đăng nhập</a>';
-                                } else {
-                                    echo '<a href="?user_id=' . session::get("user_id") . '"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a>';
-                                }
-                                ?>
-						</li>
-					</ul>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End mainmenu area -->
+ <!-- End mainmenu area -->
 <?php
      include 'inc/slider.php';
   ?>

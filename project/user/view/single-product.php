@@ -1,23 +1,7 @@
 <?php
     include 'inc/header.php'
   ?>
-     <div class="mainmenu-area">
-        <div class="container">
-            <div class="row">
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                       <li ><a href="?controller=index">Trang chủ</a></li>
-                        <li><a href="?controller=shop">Cửa hàng</a></li>
-
-                        <li ><a href="?controller=cart">Giỏ hàng</a></li>
-                        <li><a href="?controller=checkout">Thanh toán</a></li>
-                        <li><a href="?controller=contact">Liên hệ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End mainmenu area -->
-		<strong><h3 style="text-align: center; margin-top: 20px; color:green">Chi tiết sản phẩm</h3></strong>
+<strong><h3 style="text-align: center; margin-top: 20px; color:green">Chi tiết sản phẩm</h3></strong>
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -97,7 +81,6 @@
                                                     <p><label for="email">Email</label> <input name="email" type="email"></p>
                                                     <div class="rating-chooser">
                                                         <p>Đánh giá</p>
-
                                                         <div class="rating-wrap-post">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
@@ -116,7 +99,6 @@
                                 </div>
                             </div>
                         </div>
-    <!--Chi tiết sản phẩm-->
 			</div>
 			</div>
 		</div>

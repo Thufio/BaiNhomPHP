@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 19, 2021 lúc 07:15 AM
+-- Thời gian đã tạo: Th10 29, 2021 lúc 06:26 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 7.3.30
+-- Phiên bản PHP: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -60,20 +60,6 @@ CREATE TABLE `cart` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `magiamgia`
---
-
-CREATE TABLE `magiamgia` (
-  `id_magg` varchar(30) NOT NULL,
-  `type_magg` int(11) NOT NULL,
-  `DKG` int(11) NOT NULL,
-  `SOLUONG` int(11) NOT NULL,
-  `NAD` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `order`
 --
 
@@ -121,8 +107,6 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `id_category`, `price1`, `price2`, `content`, `author`, `image_link`, `created`, `view`, `quantity`) VALUES
-('3', 'Mắt biếc', 'Truyện', 75000, 60000, 'Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).', 'Nguyễn Nhật Ánh', 'product-4.jpg', '2019-06-01 10:32:17', 0, 4),
-('4', ' Tôi là ai - và nếu vậy thì bao nhiêu? (2007)  ', 'Triết học, xã hội học', 300000, 250000, 'Trên thị trường sách Việt Nam hiện nay, khó có thể tìm được cuốn sách nào bàn về triết học dành cho bạn trẻ tốt hơn cuốn Tôi là ai - và nếu vậy thì bao nhiêu? của triết gia Đức Richard David Precht. Cuốn sách này không bàn những vấn đề kinh viện, mà nó bàn ngay vào ba câu hỏi mà con người luôn phải đối diện trong cuộc sống: Tôi có thể biết gì? Tôi nên làm gì? và Tôi có quyền hy vọng gì?', 'Richard David Precht ', '1575045356.jpg', '2019-11-29 23:35:56', 0, 3),
 ('5', 'Công Nghệ Blockchain', 'Công nghệ thông tin', 150000, 100000, 'Blockchain là chủ đề đang vô cùng nóng trên toàn cầu hiện nay. Nó cùng với Bitcoin và tiền kỹ thuật số trở thành đề tài bàn luận trên rất nhiều mặt báo và trong những cuộc trò chuyện của mọi người. Tuy nhiên, khi nói về blockchain vẫn còn nhiều tranh cãi. Có người lo lắng rằng Bitcoin có thể chỉ là bong bóng, nhiều người cho rằng công nghệ phía sau nó là một sự đột phá, và công nghệ ấy sẽ tiếp tục con đường của mình cho đến khi được chấp nhận và tích hợp với Internet.\r\n\r\nThậm chí, Jamie Dimon, CEO của JP Morgan, người đã gay gắt phản đối Bitcoin và gây ra nhiều lo lắng cho cộng đồng tiền kỹ thuật số cũng đã đồng ý rằng, công nghệ DLT (công nghệ sổ cái phân tán - distributed ledger technology) có tiềm năng rất lớn để thay đổi ngành tài chính và các ngành khác. Hơn nữa, JP Morgan cùng với nhiều ngân hàng đã tiến hành kiểm tra blockchain cho những trường hợp sử dụng khác nhau trong thực tế.\r\n\r\nVậy thì Blockchain thực chất là gì? Nó có thể ứng dụng vào những lĩnh vực nào trong cuộc sống và tại sao nó lại được quan tâm như vậy?', 'Nhiều tác giả', '1575044989.jpg', '2019-11-29 23:29:49', 0, 4),
 ('6', 'Thám Tử Lừng Danh Conan - Tập 90', 'Truyện tranh trinh thám', 18000, 16000, 'Sự thật nào sẽ được làm sáng tỏ đằng sau mối bất hòa giữa hai con người phục vụ công lí ở hai vị thế khác nhau - mật vụ FBI Akai và cảnh sát Amuro!?\r\n\r\nCuộc phiêu lưu mới sẽ đưa độc giả đến gần hơn với Tổ chức Áo Đen, tiết lộ mối quan hệ giữa Sera và “em gái ngoài lãnh địa”!!\r\n\r\nCuối cùng, chuyện tình cảm giữa Heiji và Kazuha cũng có nhiều chuyển biến…!! Tóm lại là sau một thời gian gây bão, thám tử Conan tập 90 đã ấn định ngày phát hành: 24.02 trên toàn quốc!! Chúc các bạn một năm mới tưng bừng và hào hứng nhé…!!', 'Gosho Aoyama', '1575043438.png', '2019-11-29 23:03:58', 0, 7),
 ('7', 'Thám Tử Lừng Danh Conan - Tuyển Tập Đặc Biệt: Những Câu Chuyện Lãng Mạn - Tập 1', 'Truyện tranh trinh thám', 20000, 18000, 'Cuốn sách này tập hợp những mẩu chuyện lãng mạn giữa Conan (Shinichi) và Ran. Chuyện tình giữa Conan (Shinichi) và Ran khiến độc giả không sao rời mắt được... Tình cảm giữa họ tiến triển từng bước, như mưa dầm thấm lâu...!?', 'Gosho Aoyama', '1575043621.jpg', '2019-11-29 23:07:01', 0, 4),
@@ -166,14 +150,37 @@ CREATE TABLE `typebook` (
 --
 
 CREATE TABLE `user` (
-  `id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `id` int(255) NOT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `user_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `avatar` varchar(225) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'https://giffiles.alphacoders.com/398/3987.gif',
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `phone` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `address` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(200) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `user_name`, `avatar`, `email`, `phone`, `address`, `password`) VALUES
+(1, 'Nguyễn Văn Hải Long', 'admin', '', 'xzjpbfrjzcxxure@uniromax.com', '0563011231', 'Hải Dương', 'admin'),
+(4, 'Nguyễn Văn Hải Long', 'long', 'https://giffiles.alphacoders.com/398/3987.gif', 'xzjpbfrjzcxxur3e@uniromax.com', '0563011231', '20', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `voucher`
+--
+
+CREATE TABLE `voucher` (
+  `id_magg` varchar(30) NOT NULL,
+  `type_magg` int(11) NOT NULL,
+  `DKG` int(11) NOT NULL,
+  `SOLUONG` int(11) NOT NULL,
+  `NAD` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -191,12 +198,6 @@ ALTER TABLE `admin`
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `FULLTEXT` (`id_user`) USING BTREE;
-
---
--- Chỉ mục cho bảng `magiamgia`
---
-ALTER TABLE `magiamgia`
-  ADD PRIMARY KEY (`id_magg`);
 
 --
 -- Chỉ mục cho bảng `order`
@@ -228,6 +229,22 @@ ALTER TABLE `typebook`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `voucher`
+--
+ALTER TABLE `voucher`
+  ADD PRIMARY KEY (`id_magg`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

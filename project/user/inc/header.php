@@ -80,11 +80,6 @@ $banner = new Banner;
                         <h1><a href="./"><img src="../img/logo.png"></a></h1>
                     </div>
                 </div>
-                <div class="col-sm-6 bottom-right">
-                    <div class="shopping-item">
-                        <a href="?controller=cart">Giỏ Hàng<i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div> <!-- End site branding area -->
@@ -92,4 +87,57 @@ $banner = new Banner;
     <div class="shopping-item-2" style="position: fixed;padding: 10px;border: 1px solid black;border-radius: 5px;right: 10px;z-index: 1000;bottom: 10px;background-color: white;cursor: pointer;display: none;" onclick="window.location.href='?controller=cart'">
         <i class="fa fa-shopping-cart" style="font-size: 30px;"></i>
         <span class="product-count">5</span>
+    </div>
+	     <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+						<li><a href="?controller=index">Trang chủ</a></li>
+                        <li><a href="?controller=shop">Cửa hàng</a></li>
+                        <li ><a href="?controller=cart">Giỏ hàng</a></li>
+                        <li><a href="?controller=checkout">Thanh toán</a></li>
+						<li><a href="?controller=search">Tìm kiếm</a></li>
+                        <li><a href="?controller=contact">Liên hệ</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><?php
+
+                                $login_check = session::get("user_login");
+                                if ($login_check == false) { } else {
+                                    echo ' <a href="?controller=account"><span class="glyphicon glyphicon-user"></span> <b>Xin chào, ' . session::get("fullname") . '</b></a>';
+                                }
+                                ?>
+						</li>
+							<?php
+                            if (isset($_GET["user_id"])) {
+                                echo '<script language="javascript">';
+                                echo 'confirm("Bạn muốn đăng xuất?",function(e){';
+                                echo       'if(e==true){' . session::destroy() . ';}';
+                                echo '});';
+                                echo '</script>';
+                            }
+                            ?>
+						<li>
+							<?php
+                                $login_check = session::get("user_login");
+                                if ($login_check == false) {
+                                    echo '<a href="?controller=login"><i class="fa fa-user"></i> Đăng nhập</a>';
+                                } else {
+                                    echo '<a href="?user_id=' . session::get("user_id") . '"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a>';
+                                }
+                                ?>
+						</li>
+					</ul>
+                </div>
+            </div>
+        </div>
     </div>

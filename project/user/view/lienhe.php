@@ -23,31 +23,7 @@
         }
     }
   ?>
- <div class="mainmenu-area">
-        <div class="container">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div> 
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                       <li ><a href="?controller=index">Trang chủ</a></li>
-                        <li><a href="?controller=shop">Cửa hàng</a></li>
-                      
-                        <li ><a href="?controller=cart">Giỏ hàng</a></li>
-                        <li><a href="?controller=checkout">Thanh toán</a></li>
-                        <li class="active"><a href="?controller=contact">Liên hệ</a></li>
-                    </ul>
-                </div>  
-            </div>
-        </div>
-    </div> <!-- End mainmenu area -->
-    <strong><h3 style="text-align: center; margin-top: 20px; color:green" id="phanhoi">Phản hồi từ khách hàng</h3></strong>
+<strong><h3 style="text-align: center; margin-top: 20px; color:green" id="phanhoi">Phản hồi từ khách hàng</h3></strong>
 <div class="row">
 <div class="col-sm-6 col-sm-offset-3">
     <div class="well" style="margin-top: 10%;">

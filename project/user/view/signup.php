@@ -22,13 +22,12 @@
   <div class="login-page">
   <div class="form">
     <p class="notice">CHÀO MỪNG QUÝ KHÁCH!</p>
-    <!--Xuất ra thông báo nếu có lỗi-->
     <?php
       if(isset($signup)){
         echo  $signup;
       }
     ?>
-    <form class="login-form" action="" method="POST">
+    <form class="login-form" action="#" method="POST">
 
       <input name="user_name" type="text" placeholder="Tên đăng kí"/>
       <input name="password" type="password" placeholder="Mật khẩu"/>
@@ -38,7 +37,7 @@
       <input name="address" type="text" placeholder="Địa chỉ"/>
       <button name="signup" type="submit">Đăng kí</button>
       <p >
-        <button name="huy" type="submit"  ><a href="index.php" style="text-decoration: none;color: #fff"> Hủy</a> </button>
+        <button name="huy" type="submit"  ><a href="?controller=login" style="text-decoration: none;color: #fff">Đăng nhập</a> </button>
       </p>
        <p class="message">Bằng việc đăng kí, bạn đã đồng ý với Website về những <a href="view/legal.php" target="_blank">Điều khoản dịch vụ</a> và <a href="view/privacy.php" target="_blank">Chính sách bảo mật</a> </p>
     </form>

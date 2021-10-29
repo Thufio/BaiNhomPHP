@@ -18,9 +18,9 @@
   <script type="text/javascript" src="public/alertify/src/alertify.js"></script>
 </head>
 <?php
-    include_once ("model/users.php"); //Khai báo thư viện lớp users
-    $user=new User();//tạo ra 1 đối tượng user
-    if($_SERVER['REQUEST_METHOD']=='POST'&& isset($_POST['login'])){ //serve yêu cầu method Post và có biến _POST tồn tại thì thực hiện hàm đăng kí 
+    include_once ("model/users.php");
+    $user=new User();
+    if($_SERVER['REQUEST_METHOD']=='POST'&& isset($_POST['login'])){
         $login=$user->LogInUser($_POST);
     }
 ?>
@@ -34,14 +34,16 @@
       }
     ?>
     <form class="login-form" action="" method="POST">
+	<b>Tên Đăng Nhập:</b>
       <input name="email_name" type="text" placeholder="Username hoặc email"/>
+	<b>Mật khẩu:</b>
       <input name="password" type="password" placeholder="Mật khẩu"/>
       <button name="login" type="submit">Đăng nhập</button>
       <p>
         <button name="huy" type="submit"><a href="index.php" style="text-decoration: none;color: #fff"> Quay lại</a></button>
         
       </p>
-      <p class="message">Nếu bạn chưa đăng có tài khoản? <a href="?controller=signup">Tạo tài khoản</a></p>
+      <h2 class="message dark">Nếu bạn chưa đăng có tài khoản? <a href="?controller=signup">Tạo tài khoản</a></h2>
     </form>
   </div>
 </div>

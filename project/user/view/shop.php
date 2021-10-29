@@ -1,54 +1,7 @@
 <?php
-    include 'inc/header.php'
+    include 'inc/header.php';
   ?>
-
-
- 
-     <div class="mainmenu-area">
-        <div class="container">
-            <div class="row">
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                       <li ><a href="?controller=index">Trang chủ</a></li>
-                        <li class="active"><a href="?controller=shop">Cửa hàng</a></li>
-
-                        <li ><a href="?controller=cart">Giỏ hàng</a></li>
-                        <li><a href="?controller=checkout">Thanh toán</a></li>
-                        <li><a href="?controller=contact">Liên hệ</a></li>
-                    </ul>
-
-
-
-
-                     <!-----------tìm kiếm-------------->
-<div style="text-align: right;">
-<div class="timkiem">
-    <form controller="" method="GET">
-        
-            
-                <input type="hidden" name="view" value="product" />
-                <td><input type="text" name="tukhoa" placeholder="Nhập nội dung" class="textbox"></td>
-                <td><input type="submit" name="Tìm kiếm" id="submit" /></td>
-
-          
-        
-        <input type="hidden" name="controller" value="tim-kiem" />
-    </form>
-</div>
-</div>
-    <div class="product-big-title-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-bit-title text-center">
-                        <h2>Cửa hàng</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<!--Danh sách Sản phẩm-->
-    <div class="single-product-area">
+<div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row" align="center">

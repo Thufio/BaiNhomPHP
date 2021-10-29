@@ -1,22 +1,7 @@
 <?php
 include 'inc/header.php'
 ?>
-<div class="mainmenu-area">
-    <div class="container">
-        <div class="row">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="?controller=index">Trang chủ</a></li>
-                    <li><a href="?controller=shop">Cửa hàng</a></li>
-                    <li class="active"><a href="?controller=cart">Giỏ hàng</a></li>
-                    <li><a href="?controller=checkout">Thanh toán</a></li>
-                    <li><a href="?controller=contact">Liên hệ</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-	<strong><h3 style="text-align: center; margin-top: 20px; color:green" id="ps">Giỏ hàng</h3></strong>
+<strong><h3 style="text-align: center; margin-top: 20px; color:green" id="ps">Giỏ hàng</h3></strong>
 <div class="single-product-area">
 <center>
     <div class="zigzag-bottom"></div>

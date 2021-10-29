@@ -17,9 +17,9 @@
             require_once('view/shop.php');
             break;
         }
-        case 'tim-kiem':{
-            if(isset($_GET['tukhoa'])){
-                $key=$_GET['tukhoa'];
+        case 'search':{
+            if(isset($_GET['sach'])){
+                $key=$_GET['sach'];
                
 
 

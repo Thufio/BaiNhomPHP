@@ -9,14 +9,10 @@
 				return $result;
 			}
 			public function SaveOrder($dataO){
-
- // cái này insert vào transaction trước
-
 			$qty =2;
 			$amount =333000;
 			$data = 'tạm thời' ;
 			$status = 0 ;
-			// tạm thời luôn lưu tran _id = 1
 			$transaction_id = 1;
 			$product_id =1;
 			
@@ -25,7 +21,7 @@
 						if($result){
 									echo '<script language="javascript">';
                        				echo 'document.addEventListener("DOMContentLoaded", function() {';
-                       				echo ' alertify.alert("Thêm thành công!!!!!")';
+                       				echo ' alertify.alert("Gửi đơn hàng thành công!!!!!")';
 									echo '});';
 									echo '</script>';
 								}
@@ -33,7 +29,7 @@
 									echo $result;
 									echo '<script language="javascript">';
                        				echo 'document.addEventListener("DOMContentLoaded", function() {';
-                       				echo ' alertify.alert("Thêm không thành công!!!!!!!!!!")';
+                       				echo ' alertify.alert("Gửi đơn hàng thất bại!!!!!!!!!!")';
 									echo '});';
 									echo '</script>';
 								}	

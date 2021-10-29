@@ -3,7 +3,7 @@
 
 
 .login-page {
-  width: 360px;
+  width: 600px;
   padding: 8% 0 0;
   margin: auto;
 }
@@ -11,9 +11,9 @@
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
+  max-width: 600px;
   margin: 0 auto 100px;
-  padding: 45px;
+  padding: 40px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -32,7 +32,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #6adde8;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -53,7 +53,7 @@
  p.notice {
   text-align: center;
   color: #4CAF50;
-  font-size: 30px;
+  font-size: 18px;
   margin: 0 0 15 0;
 }
 span.error{

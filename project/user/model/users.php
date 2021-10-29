@@ -17,17 +17,14 @@
 					$phone=$data['phone'];
 					$address=$data['address'];
 
-					//Kiểm tra thông tin đã được điền
+					//Kiểm tra thông tin đã được điền đầy đủ không 
 					if($user_name==""||$name==""||$password==""||$phone==""||$email==""||$address==""){
-						echo '<script language="javascript">';
-                      	echo 'document.addEventListener("DOMContentLoaded",function(){';
-                       	echo ' alertify.alert("Vui lòng điền đủ thông tin!")';
-						echo '});';
-						echo '</script>';
+						$alert="<span class='error'>*Bạn phải điền đầy đủ thông tin nhé!</span>";
+								return $alert;
 					}
 					//Kiểm tra tài khoản đăng kí
 					else{
-						//Kiểm tra số điện thoại
+						//Kiểm tra số điện thoại 10 và theo đầu số các nhà mạng
 						if(!preg_match("/^((09|03|07|08|05)+([0-9]{8}))$/",$phone)) {
             				return $alert="<span class='error'>*Số điện thoại không hợp lệ</span>";
         				}
@@ -44,7 +41,7 @@
 
 							if($result_check_email)
 							{
-								$alert="<span class='error'>*Email đã được sử dụng!</span>";
+								$alert="<span class='error' style='text-align:center;'>*Email đã được sử dụng!</span>";
 								return $alert;
 
 							}
@@ -62,22 +59,19 @@
 							if($result){
 									echo '<script language="javascript">';
                        				echo 'document.addEventListener("DOMContentLoaded", function() {';
-                       				echo ' alertify.alert("Thêm thành công,vui lòng đăng nhập lại!")';
-
+                       				echo ' alertify.alert("Đăng ký thành công!")';
 									echo '});';
 									echo '</script>';
 								}
 								else{
 									echo '<script language="javascript">';
                        				echo 'document.addEventListener("DOMContentLoaded", function() {';
-                       				echo ' alertify.alert("Thêm không thành công!")';
-
+                       				echo ' alertify.alert("Đang ký thất bại!")';
 									echo '});';
 									echo '</script>';
 								}	
 						}
 					}
-
 			}
 			public function LogInUser($data)
 			{
@@ -117,6 +111,7 @@
 					//$oldpassword=$data['oldpasswd'];
 					//$re_newpassword=$data['re-newpasswd'];
 					$email=$data['email'];
+					$avatar=$data['avatar'];
 					$phone=$data['phone'];
 					$address=$data['address'];
 					if($name==""||$phone==""||$email==""||$address==""){
@@ -126,7 +121,6 @@
 						echo '});';
 						echo '</script>';
 					}
-					
 					// $check_pass="SELECT *FROM user WHERE id='$id' AND password='$oldpassword'";
 					// $result_check_pass=$this->select($check_pass);
 					$check_email="SELECT *FROM user WHERE email='$email' AND id<>$id LIMIT 1";
@@ -149,12 +143,12 @@
 					}
 							
 					else{
-								$query="UPDATE user SET name='$name',email='$email',phone='$phone',address='$address'WHERE id='$id'";
+								$query="UPDATE user SET name='$name',email='$email', avatar='$avatar',phone='$phone',address='$address'WHERE id='$id'";
 								$result=$this->update($query);
 								if($result){
 									echo '<script language="javascript">';
                        				echo 'document.addEventListener("DOMContentLoaded", function() {';
-                       				echo ' alertify.alert("Cập nhập thành công!")';
+                       				echo ' alertify.alert("Cập nhập thành công! Tải lại trang để thấy thay đôi")';
 									echo '});';
 									echo '</script>';
 								}	

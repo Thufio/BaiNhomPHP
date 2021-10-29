@@ -8,19 +8,7 @@
                 }
 
  ?>
- 
- <div class="product-big-title-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-bit-title text-center">
-                        <h2>Thông tin tài khoản</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="single-product-area">
+<div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
@@ -34,7 +22,7 @@
                         if($result){
                             while($row=$result->fetch_assoc()){
                     ?>
-                     <img src="/view/image/<?php  echo $row["avatar"]?>" alt='Avatar'/>
+                     <img src="<?php  echo $row["avatar"]?>" alt='Avatar'/>
                     </div> 
                     
                 </div>
@@ -46,18 +34,12 @@
                         }
                         
                  ?>
-                
-            
                 <div class="col-md-9">
                     <div class="woocommerce">
                         <form action="#" class="edit-profile" method="post" name="edit-profile">
-
                                 <div id="customer_details" class="col-md-7"  >
                                         <div class="woocommerce-billing-fields">
                                             <h3>Thông tin chi tiết</h3>
-                                            
-                                           
-                                            
                                             <p >
                                                 <?php 
                                                 if(isset($update_user)){
@@ -65,39 +47,28 @@
                                                 }
                                             ?>
                                             </p>
-
-                                        
                                             <div class="clear"></div>
-                                            
-                                                
-                        
                                             <p >
-                                                <label class="" for="fullname">Họ Tên</label>
+                                                <label class="" for="fullname">Họ Tên:</label>
                                                 <input type="text" value="<?php echo $row["name"]  ?>" placeholder=""  name="fullname" class="input-text ">
                                             </p>
-
-                                        
                                             <div class="clear"></div>
-
-
                                             <p>
-                                                <label class="" for="address">Địa chỉ </label>
+                                                <label class="" for="address">Địa chỉ: </label>
                                                 <input type="text" value="<?php echo $row["address"]  ?>" placeholder=""  name="address" class="input-text ">
                                             </p>
-											<form action="/image.php" method="post" enctype="multipart/form-data">
-											Chọn file để upload:
-											<input type="file" name="fileupload" id="fileupload">
-											<input type="submit" value="Đăng ảnh" name="submit">
-											</form>
-
                                             <p>
-                                                <label class="" for="email">Email</label>
+                                                <label class="" for="email">Email:</label>
                                                 <input type="text" value="<?php echo $row["email"]  ?>" placeholder=""  name="email" class="input-text ">
                                             </p>
                                                 <div class="clear"></div>
                                             <p>
-                                                <label class="" for="phone">Số điện thoại </label>
+                                                <label class="" for="phone">Số điện thoại: </label>
                                                 <input type="text" value="<?php echo $row["phone"]  ?>" placeholder="" name="phone" class="input-text ">
+                                            </p>
+											<p>
+                                                <label class="" for="avatar">Link ảnh: </label>
+                                                <input type="text" value="<?php echo $row["avatar"]  ?>" placeholder="" name="avatar" class="input-text ">
                                             </p>
                                             <div class="clear"></div>
                                             <label>
@@ -142,30 +113,15 @@
                                                <div class="">
 
                                                     <input type="submit" class=" btn btn-info" value="Cập nhập"  name="update" class="button alt">
-
-
                                                 </div>
-
-
-                                        
                                         </div>
-                                   
-
-                                  
-
                                 </div>
-
-                              
                             </form>
-
                         </div>   
-                
-                         
                 </div>
             </div>
         </div>
-    </div>
-
+</div>
  <?php
  		include 'inc/footer.php' 
   ?>
