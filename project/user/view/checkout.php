@@ -1,13 +1,16 @@
 <?php
-    include 'inc/header.php'
+    include 'inc/header.php';
+	//Kiểm tra phiên đăng nhập
+	$login_check=session::get("user_login");
+        if(!$login_check){
+        header('Location:?controller=login');
+        }
 ?>
 <?php
-    include_once ("controller/Xac_Nhan.php"); //Khai báo thư viện lớp users
-    $user=new User();//tạo ra 1 đối tượng user
-    if($_SERVER['REQUEST_METHOD']=='POST'&& isset($_POST['xacnhan'])){ //serve yêu cầu method Post và có biến _POST tồn tại thì thực hiện hàm đăng kí
-
+    include_once ("controller/Xac_Nhan.php");
+    $user=new User();
+    if($_SERVER['REQUEST_METHOD']=='POST'&& isset($_POST['xacnhan'])){
         $xacnhan=$order->SaveOrder($_POST);
-     
     }
 ?>
 <strong><h3 style="text-align: center; margin-top: 20px; color:green" id="ps">THANH TOÁN ĐƠN HÀNG</h3></strong>

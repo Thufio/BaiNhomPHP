@@ -14,7 +14,7 @@
                     <div class="latest-product">
                         <h2 class="section-title">Sản phẩm mới nhất</h2>
                         <div class="product-carousel">
-                            <!--List Sản phẩm gần đây-->
+                            <!--List sản phẩm gần đây-->
                             <?php
 
                                 $getpd=$product->GetAllProduct();
@@ -54,20 +54,18 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="single-product-widget">
                         <h2 class="product-wid-title">Bán chạy nhất</h2>
                         <a href="?controller=shop" class="wid-view-more">Xem tất cả</a>
                          <?php
 
-                                    $quan=2;
+                                    $quan=3;
                                     $getpd=$product->GetXProduct($quan);
                                     if ($getpd) {
                                         $i=0;
                                     while($row = $getpd->fetch_assoc()) {
-
                                         if($i>$quan-1) break;
-
                                         echo '<div class="single-wid-product">
                                         <a href="?controller=single&id='.$row["id"].'"><img src="../img/'.$row["image_link"].'" alt="" class="product-thumb"></a>
                                         <h2><a href="?controller=single&id='.$row["id"].'">'.$row["name"].'</a></h2>
@@ -85,55 +83,16 @@
                                          $i++;
                                      }
                                 }
-
                         ?>
-
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="single-product-widget">
-                        <h2 class="product-wid-title">Xem gần đây</h2>
+                        <h2 class="product-wid-title">Sản phẩm mới nhập</h2>
                         <a href="?controller=shop" class="wid-view-more">Xem tất cả</a>
                         <?php
 
-                                    $quan=2;
-                                    $getpd=$product->GetXProduct($quan);
-                                    if ( $getpd) {
-                                        $i=0;
-                                    while($row = $getpd->fetch_assoc()) {
-
-                                        if($i>$quan-1) break;
-
-                                        echo '<div class="single-wid-product">
-                                        <a href="?controller=single&id='.$row["id"].'"><img src="../img/'.$row["image_link"].'" alt="" class="product-thumb"></a>
-                                        <h2><a href="?controller=single&id='.$row["id"].'">'.$row["name"].'</a></h2>
-                                        <div class="product-wid-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-wid-price">
-                                        <ins>'.number_format($row["price2"]).'<sup>đ</sup></ins> <del>'.number_format($row["price1"]).'<sup>đ</sup></del>
-                                        </div>
-                                        </div>';
-                                         $i++;
-                                     }
-                                }
-
-
-                        ?>
-
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="single-product-widget">
-                        <h2 class="product-wid-title">Sản phẩm mới</h2>
-                        <a href="?controller=shop" class="wid-view-more">Xem tất cả</a>
-                        <?php
-
-                                   $quan=2;
+                                   $quan=3;
                                     $getpd=$product->GetXProduct($quan);
                                     if ( $getpd) {
                                         $i=0;

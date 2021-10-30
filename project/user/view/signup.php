@@ -28,19 +28,17 @@
       }
     ?>
     <form class="login-form" action="#" method="POST">
-
       <input name="user_name" type="text" placeholder="Tên đăng kí"/>
       <input name="password" type="password" placeholder="Mật khẩu"/>
       <input name="name" type="text" placeholder="Họ tên"/>
       <input name="email" type="email" placeholder="Email"/>
       <input name="phone" type="text" placeholder="Số điện thoại"/>
       <input name="address" type="text" placeholder="Địa chỉ"/>
+	  <p class="message">Bằng việc đăng kí, bạn đã đồng ý với Website về những <a href="view/legal.php" target="_blank">Điều khoản dịch vụ</a> và <a href="view/privacy.php" target="_blank">Chính sách bảo mật</a> </p>
       <button name="signup" type="submit">Đăng kí</button>
-      <p >
-        <button name="huy" type="submit"  ><a href="?controller=login" style="text-decoration: none;color: #fff">Đăng nhập</a> </button>
-      </p>
-       <p class="message">Bằng việc đăng kí, bạn đã đồng ý với Website về những <a href="view/legal.php" target="_blank">Điều khoản dịch vụ</a> và <a href="view/privacy.php" target="_blank">Chính sách bảo mật</a> </p>
     </form>
+	<br>
+	<button><a href="?controller=login" style="text-decoration: none">Đăng nhập</a> </button>
   </div>
 </div>
 

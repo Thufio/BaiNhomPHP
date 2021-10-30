@@ -1,12 +1,10 @@
-<?php
-       
+<?php     
 		include 'inc/header.php' ;
         //Kiểm tra phiên đăng nhập
 		$login_check=session::get("user_login");
                 if(!$login_check){
                     header('Location:index.php');
                 }
-
  ?>
 <div class="single-product-area">
         <div class="zigzag-bottom"></div>

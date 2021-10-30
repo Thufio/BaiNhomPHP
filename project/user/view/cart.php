@@ -1,5 +1,5 @@
 <?php
-include 'inc/header.php'
+include 'inc/header.php';
 ?>
 <strong><h3 style="text-align: center; margin-top: 20px; color:green" id="ps">Giỏ hàng</h3></strong>
 <div class="single-product-area">

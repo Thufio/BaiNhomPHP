@@ -1,10 +1,4 @@
 <?php
-    // include "model/db.php";
-    // include "model/users.php";
-    // include "lib/session.php";
-    // Session::init();
-    // $db=new Database();
-    // $user=new User;
    if(isset($_GET['controller'])) {
        $controller=$_GET['controller'];
     }
