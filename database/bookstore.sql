@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 29, 2021 lúc 06:26 PM
+-- Thời gian đã tạo: Th10 30, 2021 lúc 06:43 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 7.3.31
+-- Phiên bản PHP: 7.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -78,9 +78,9 @@ CREATE TABLE `order` (
 --
 
 INSERT INTO `order` (`transaction_id`, `id`, `product_id`, `qty`, `amount`, `data`, `status`) VALUES
-('1', '3', '3', 2, '300000.0000', 'Mắt Biếc', 1),
-('2', '4', '4', 1, '250000.0000', 'Tôi là ai - và nếu vậy thì bao nhiêu? (2007)', 0),
-('3', '2', '6', 1, '16000.0000', 'Thám Tử Lừng Danh Conan - Tập 90', 0);
+('2', '2', 'Rezero07', 2, '2.0000', '', 0),
+('1', '3', 'VCG', 1, '2.0000', '', 0),
+('1', '1', 'Aleph', 2, '1.0000', '', 0);
 
 -- --------------------------------------------------------
 
@@ -107,13 +107,15 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `id_category`, `price1`, `price2`, `content`, `author`, `image_link`, `created`, `view`, `quantity`) VALUES
-('5', 'Công Nghệ Blockchain', 'Công nghệ thông tin', 150000, 100000, 'Blockchain là chủ đề đang vô cùng nóng trên toàn cầu hiện nay. Nó cùng với Bitcoin và tiền kỹ thuật số trở thành đề tài bàn luận trên rất nhiều mặt báo và trong những cuộc trò chuyện của mọi người. Tuy nhiên, khi nói về blockchain vẫn còn nhiều tranh cãi. Có người lo lắng rằng Bitcoin có thể chỉ là bong bóng, nhiều người cho rằng công nghệ phía sau nó là một sự đột phá, và công nghệ ấy sẽ tiếp tục con đường của mình cho đến khi được chấp nhận và tích hợp với Internet.\r\n\r\nThậm chí, Jamie Dimon, CEO của JP Morgan, người đã gay gắt phản đối Bitcoin và gây ra nhiều lo lắng cho cộng đồng tiền kỹ thuật số cũng đã đồng ý rằng, công nghệ DLT (công nghệ sổ cái phân tán - distributed ledger technology) có tiềm năng rất lớn để thay đổi ngành tài chính và các ngành khác. Hơn nữa, JP Morgan cùng với nhiều ngân hàng đã tiến hành kiểm tra blockchain cho những trường hợp sử dụng khác nhau trong thực tế.\r\n\r\nVậy thì Blockchain thực chất là gì? Nó có thể ứng dụng vào những lĩnh vực nào trong cuộc sống và tại sao nó lại được quan tâm như vậy?', 'Nhiều tác giả', '1575044989.jpg', '2019-11-29 23:29:49', 0, 4),
-('6', 'Thám Tử Lừng Danh Conan - Tập 90', 'Truyện tranh trinh thám', 18000, 16000, 'Sự thật nào sẽ được làm sáng tỏ đằng sau mối bất hòa giữa hai con người phục vụ công lí ở hai vị thế khác nhau - mật vụ FBI Akai và cảnh sát Amuro!?\r\n\r\nCuộc phiêu lưu mới sẽ đưa độc giả đến gần hơn với Tổ chức Áo Đen, tiết lộ mối quan hệ giữa Sera và “em gái ngoài lãnh địa”!!\r\n\r\nCuối cùng, chuyện tình cảm giữa Heiji và Kazuha cũng có nhiều chuyển biến…!! Tóm lại là sau một thời gian gây bão, thám tử Conan tập 90 đã ấn định ngày phát hành: 24.02 trên toàn quốc!! Chúc các bạn một năm mới tưng bừng và hào hứng nhé…!!', 'Gosho Aoyama', '1575043438.png', '2019-11-29 23:03:58', 0, 7),
-('7', 'Thám Tử Lừng Danh Conan - Tuyển Tập Đặc Biệt: Những Câu Chuyện Lãng Mạn - Tập 1', 'Truyện tranh trinh thám', 20000, 18000, 'Cuốn sách này tập hợp những mẩu chuyện lãng mạn giữa Conan (Shinichi) và Ran. Chuyện tình giữa Conan (Shinichi) và Ran khiến độc giả không sao rời mắt được... Tình cảm giữa họ tiến triển từng bước, như mưa dầm thấm lâu...!?', 'Gosho Aoyama', '1575043621.jpg', '2019-11-29 23:07:01', 0, 4),
-('8', 'One Piece - Tập 80', 'Truyện tranh', 17000, 16000, 'Sau khi lên được tàu hỏa trên biển, Sanji đã hội ngộ Sogeking và Franky. Kế hoạch đoạt lại Robin bắt đầu. Nào ngờ trên tàu lại có những tay sát thủ lão luyện đang đợi họ. Trong khi đó, Luffy và những người khác vẫn đang tức tốc đuổi theo.\r\n\r\nNhững chuyến phiêu lưu trên đại dương xoay quanh ONE PIECE lại bắt đầu!!\r\n\r\n', 'Eiichiro Oda', '1575043782.jpg', '2019-11-29 23:09:42', 0, 5),
-('9', 'DẠY CON ĐỐI MẶT VỚI VÁN CỜ CUỘC ĐỜI', 'Đời sống', 89000, 53000, 'Dạy Con Đối Mặt Với Ván Cờ Cuộc Đời được viết với quan niệm: Những quân cờ vua nhỏ bé không chỉ mang đến cho con người những cung bậc cảm xúc khác nhau mà còn dạy con người nhiều bài học về cuộc đời.\r\n\r\nCuốn sách là trang nhật ký của các thành viên trong một gia đình có con đang ở giai đoạn “khủng hoảng tuổi lên 7”. Cu Tý nghịch ngợm, hay tò mò về những thứ xung quanh mình và yêu thích chơi cờ vua. Người mẹ dịu dàng, thường mang trong mình những nỗi lo lắng đến mức thái quá. Người bố bận rộn nhưng luôn cố gắng dành thời gian để làm bạn cùng con.\r\n\r\nXuyên suốt 5 chương sách là những tình huống mà bạn đã bắt gặp đâu đó trong cuộc sống hằng ngày. Tư duy cờ vua sẽ giúp bạn ứng phó với chúng một cách nhẹ nhàng, hiệu quả nhất. Bạn sẽ bất ngờ khi khám phá ra rằng, cờ vua không chỉ đơn thuần là một một thể thao trí tuệ mà còn ẩn chứa nhiều triết lý về cuộc sống.\r\n\r\nNuôi dạy con trưởng thành là một chặng đường dài và trên hành trình làm cha mẹ, mỗi phụ huynh vẫn còn nhiều bài học phải trải qua.\r\n\r\nDạy con đối mặt với ván cờ cuộc đời sẽ đem đến cho bạn nhiều bài học hữu ích về nuôi dạy con, về cách đứng vững giữa cuộc đời nhiều thử thách.', 'Nguyễn Hữu Huấn', '1575044198.jpg', '2019-11-29 23:16:38', 0, 4),
-('10', 'Sinh Ra Để Trở Thành Steve Jobs', 'Kĩ năng', 15000, 116000, 'Sinh ra để trở thành Steve Jobs mang đến câu trả lời cho thắc mắc lớn nhất của cả thế giới về cuộc đời, sự nghiệp của CEO và nhà đồng sáng lập Apple: Làm thế nào một gã trai trẻ kiêu căng, ngạo mạn và đầy khinh suất, bị tống cổ ra khỏi chính công ty mà mình sáng lập ra, lại có thể trở thành một nhà lãnh đạo có tầm nhìn kiệt suất nhất thời đại, và làm thay đổi cuộc sống thường ngày của hàng tỉ con người trên hành tinh này? Schlender và Tetzeli đã kể một câu chuyện hoàn toàn khác về một con người có thực đã biết vượt qua những thất bại của bản thân và học cách tối đa hóa điểm mạnh của chính mình, dựa trên những câu chuyện chưa từng được tiết lộ từ những người thân thuộc nhất với Jobs, bao gồm các thành viên trong gia đình Jobs, các cựu lãnh đạo hàng đầu và những nhân vật quan trọng nhất là Apple, Pixar và Disney, như Tim Cook, Jony Ive, Eddy Cue, Ad Catmull, John Lasserter, Robert Iger.\r\n“Chúng tôi muốn mang đến một hiểu biết sâu hơn về kho kỹ năng và khả năng tiến bộ không ngừng trong kinh doanh của Steve Jobs, và những nỗ lực gần như thần thánh nhằm tạo ảnh hưởng lên thế giới của anh. Chúng tôi muốn thể hiện những điều đó đã được tiếp năng lượng một cách phi thường như thế nào bởi tài năng độc đáo của một người tự học, và bởi chủ nghĩa lý tưởng chân chính cũng như nỗi ám ảnh đến cuồng dại của anh đối với các tiêu chuẩn thẩm mĩ khắt khe nhưng lại rất nhất quán, và ý thức lớn lao về sứ mệnh của anh. Ngay từ đầu, anh đã luôn trắc ẩn về những nỗi lo lắng và nhu cầu của những con người bình thường, những người muốn tìm thấy các công cụ mới để trao đổi cho bản thân sức mạnh và sự tiến bộ trong một thế giới ngày càng phức tạp, bất hòa và xáo trộn.”\r\n', 'Brent Schlender', 'product-12.jpg', '2019-06-01 10:25:22', 0, 1),
-('25', 'harry poter', 'tiểu thuyết', 100000, 150000, 'không có', 'jkw', '1634603040.jpg', '2021-10-19 07:24:00', 0, 10);
+('DVHH', 'Điệp Viên Hoàn Hảo X6 (Tái Bản 2019)', 'CTri', 134000, 168000, '', 'Larry Berman', 'image_195509_1_11610.jpg', '2021-10-30 23:32:32', 0, 1),
+('Rezero07', 'Re:zero - Bắt Đầu Lại Ở Thế Giới Khác 7 (Tái Bản 2021)', 'LNovel', 1000000, 110000, '', 'Tappei Nagatsuki', 're-zero-7.jpg', '2021-10-30 23:20:05', 0, 1),
+('NGK', 'Nhà Giả Kim (Tái Bản 2020)', 'TThuyet', 67000, 70000, '', 'Paulo Coelho', 'image_195509_1_36793.jpg', '2021-10-30 23:21:15', 0, 1),
+('Aleph', 'Aleph - Một Chuyến Hành Hương Của Chàng Santiago Trong Đời Thực', 'TThuyet', 114000, 120000, '', 'Paulo Coelho', 'image_224905.jpg', '2021-10-30 23:22:33', 0, 1),
+('TLHTP', 'Bộ Sách Tâm Lý Học Tội Phạm (Bộ 2 Tập)', 'TLy', 250000, 270000, '', 'Stanton E Samenow', '93-6066-690-126.jpg', '2021-10-30 23:23:50', 0, 1),
+('KNTCTTN', 'Kiếp Nào Ta Cũng Tìm Thấy Nhau - Câu Chuyện Về Những Linh Hồn Tri Kỷ Vĩnh Viễn Không Chia Lìa', 'TLy', 75900, 85000, '', 'Brian L Weiss', 'image_180561.jpg', '2021-10-30 23:25:12', 0, 1),
+('SGPWALL', 'Sói Già Phố Wall (Phần 2) - Tái Bản 2021', 'KTe', 146000, 170000, '', 'Jordan Belfort', 'image_222089.jpg', '2021-10-30 23:26:27', 0, 1),
+('TTBCC', 'Những Ông Trùm Tư Bản Cuối Cùng Ở Thượng Hải - Hai Đế Chế Kinh Tế Do Thái Cạnh Tranh Giúp Tạo Nên Tr', 'KTe', 160000, 180000, '', 'Jonathan Kaufman', 'image_244718_1_2506.jpg', '2021-10-30 23:27:40', 0, 1),
+('VCG', 'Vì Con Gái Tôi Có Thể Đánh Bại Cả Ma Vương (Bản Thường) - Tái Bản 2020', 'LNovel', 90000, 100000, '', 'CHIROLU', 'image_195509_1_32560.jpg', '2021-10-30 23:20:05', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -132,6 +134,14 @@ CREATE TABLE `transaction` (
   `created` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Đang đổ dữ liệu cho bảng `transaction`
+--
+
+INSERT INTO `transaction` (`id`, `status`, `user_id`, `amount`, `payment`, `payment_info`, `message`, `created`) VALUES
+('1', 0, '11', '2.0000', '1', '', '', 0),
+('2', 1, '4', '4.0000', '1', '', '', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -142,6 +152,20 @@ CREATE TABLE `typebook` (
   `id_category` varchar(30) CHARACTER SET utf8 NOT NULL,
   `name_category` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `typebook`
+--
+
+INSERT INTO `typebook` (`id_category`, `name_category`) VALUES
+('CTri', 'Chính Trị'),
+('DSong', 'Đời sống'),
+('KTe', 'Kinh Tế'),
+('LNovel', 'Light Novel'),
+('NTinh', 'Ngôn Tình'),
+('TLy', 'Tâm lý'),
+('TThuyet', 'Tiểu thuyết'),
+('TTranh', 'Truyện Tranh');
 
 -- --------------------------------------------------------
 
@@ -166,7 +190,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `user_name`, `avatar`, `email`, `phone`, `address`, `password`) VALUES
 (1, 'Nguyễn Văn Hải Long', 'admin', '', 'xzjpbfrjzcxxure@uniromax.com', '0563011231', 'Hải Dương', 'admin'),
-(4, 'Nguyễn Văn Hải Long', 'long', 'https://giffiles.alphacoders.com/398/3987.gif', 'xzjpbfrjzcxxur3e@uniromax.com', '0563011231', '20', '1234');
+(4, 'Nguyễn Văn Hải Long', 'long', 'https://giffiles.alphacoders.com/398/3987.gif', 'xzjpbfrjzcxxur3e@uniromax.com', '0563011231', '20', '1234'),
+(11, 'user', 'User', '', 'user@gmail.com', '0354129865', 'Phú Yên', 'user123');
 
 -- --------------------------------------------------------
 
@@ -244,7 +269,7 @@ ALTER TABLE `voucher`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
